@@ -7674,3 +7674,71 @@ input[type=number] {
 .slider-cover-dots .splide__pagination {
   transform: translate(-50%, -40px) !important;
 }
+
+
+/* about  */
+.content-container {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: #f9f9f9;
+}
+
+.content label {
+  position: absolute;
+  top: 160px;
+  left: 50px;
+  font-size: 14px;
+  color: #333;
+  background-color: #fff;
+  padding: 0 5px;
+  transition: 0.3s;
+}
+
+.content #content-block {
+  margin-top: 20px;
+}
+
+
+/* Ensure anchor tag is positioned correctly */
+a {
+  position: relative;
+  display: block;
+}
+
+/* Initially, images are in normal color (no grayscale) */
+a img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease;
+  /* Smooth transition for hover effect */
+}
+
+/* Initially, the text is hidden */
+.image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* When hovering over a specific anchor tag, make the image grayscale and display text */
+a:hover img {
+  filter: brightness(50%);
+  /* Grayscale and darken the hovered image */
+}
+
+a:hover .image-text {
+  opacity: 1;
+  visibility: visible;
+}
